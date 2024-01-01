@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CutLab | Workspace</title>
+    <!-- <link rel="stylesheet" href="/templates/workspace.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/workspace.css') }}"> 
+    <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/workspace.js') }}"> </script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Potta+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NavBar -->
+  <nav>
+    <div class="left-nav">
+        <a href="/"><img src="/static/CutLab-Logo.png" alt="LOGO" /></a>
+        <p class="cutlab"><a href="/">CUTLAB</a></p>
+      </div>
+      <div class="middle-nav"></div>
+      <div class="right-nav">
+        <ul>
+          <!-- <li class="list-style"><a href="register">Sign Up</a></li> -->
+          <!-- <li class="list-style"><a href="/login">Sign In</a></li> -->
+          <li class="list-style"><a href="/contact">Contact Us</a></li>
+          <li><div class="user-logo"><img src="/static/user-profile.png" alt="User-Profile" onclick="toggleMenu()"></div></li>
+        </ul>
+        
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="/static/user-profile.png" alt="User-Image">
+                <p>User Name</p>
+              </div>
+              <hr>
+              <a href="#" class="sub-menu-link">
+                <img src="/static/Profile-menu.png" alt="Profile-Image">
+                <p>Your Profile</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img id="big-logout-img" src="/static/Log-out-menu.png" alt="Profile-Image">
+                <p>Log Out</p>
+                <span>></span>
+              </a>
+            </div>
+          </div>
+      </div>
+    </nav>
+    <main>
+        <div class="left-right">
+        <div class="left-main">
+            <p class="main-left"><a href="/">Home</a></p>
+            <p class="main-left"><a href="/">My Videos</a></p>
+        </div>
+        <div class="right-main">
+            <div class="right-top">
+              <p class="invite">Welcome to CutLab!!!</p>
+              <p class="salutation">Hey Champ! Let's create videos together!</p>
+              
+            </div>
+            <div class="right-bottom">
+              <!-- row 1 -->
+              <div class="row1">
+                <div class="sp-videos">
+                  <a href="/trim"><img src="/static/Cut-Videos.png" alt="Trim-Videos" class="sp-image"></a>
+                  <a href="/trim"><p class="sp-desc">Cut videos to the length you need in just few clicks</p></a>
+                </div>
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Crop-Videos.png" alt="Crop-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Enhance impact of your video by easily cropping frames</p></a>
+                </div>
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Merge-Videos.png" alt="Merge-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Merge shorter clips to larger clips easily</p></a>
+                </div>
+              </div>
+              <div class="row2">
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Add-Music.png" alt="Trim-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Add background music or sound effects to your videos</p></a>
+                </div>
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Adjust-Volume.png" alt="Crop-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Easily fine-tune your audio experience with our intuitive volume controls</a>
+                </div>
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Compile-Images.png" alt="Merge-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Compile your images to videos & enhance your creativity</p></a>
+                </div>
+              </div>
+
+              <div class="row3">
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Cut-Out-Videos.png" alt="Trim-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Cut-out unwanted portion from your videos</p></a>
+                </div>
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Flip-Videos.png" alt="Crop-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Flip perspectives effortlessly – use our one-click video flipping feature for a fresh viewpoint.</p></a>
+                </div>
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Images-Overlay.png" alt="Merge-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Effortlessly overlay images onto your videos for a captivating visual experience.</p></a>
+                </div>
+              </div>
+
+              <div class="row4">
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Video-to-GIF.png" alt="Merge-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Animate moments, convert your video into a GIF for shareable, lively content.</p></a>
+                </div>
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Mute-Videos.png" alt="Crop-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Silence speaks volumes, mute videos seamlessly for a noise-free viewing experience.</p></a>
+                </div>
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Rotate-Videos.png" alt="Merge-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Turn things around, easily rotate your videos for the perfect angle and perspective.</p></a>
+                </div>
+              </div>
+            
+              <div class="row5">
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Resizing-Videos.png" alt="Trim-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Perfect fit every time, resize your videos effortlessly for the ideal frame.</p></a>
+                </div>
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Add-Text.png" alt="Crop-Videos" class="sp-image correction-left"></a>
+                  <a href=""><p class="sp-desc">Textual impact, enhance your video with meaningful messages using our easy-to-add text feature.</p></a>
+                </div>
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Saving-Video-Frame.png" alt="Merge-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Capture the moment, save a perfect frame from your video with just a click.</p></a>
+                </div>
+              </div>
+
+              <div class="row6">
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Split-Screen.png" alt="Trim-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Dual perspectives, easily create split-screen videos for a dynamic and engaging viewing experience.</p></a>
+                </div>
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Video-Format.png" alt="Crop-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Format flexibility, effortlessly change the video format to suit your preferences with a simple click.</p></a>
+                </div>
+                <div class="sp-videos">
+                  <a href=""><img src="/static/Black-and-white.png" alt="Trim-Videos" class="sp-image"></a>
+                  <a href=""><p class="sp-desc">Timeless elegance, transform your videos with a classic touch – convert to black and white effortlessly.</p></a>
+                </div>
+              </div>
+
+            </div>
+        </div>
+    </div>
+    <footer>
+      <!-- Footer Section  -->
+      <div class="div5">
+        <div class="footer-section">
+          <div class="footer-left">
+            <a href="/"><img src="/static/CutLab-Logo.png" alt="Footer-Logo" class="bottom-logo"></a>
+            <a href="/"><p class="cutlab-stylish">CUTLAB</p></a>
+        </div>
+
+        <!-- Footer Contact us section  -->
+        <div class="footer-contact-us-section">
+          <p class="contact-us">Contact Us</p>
+          <p class="address contact-us-content"><b>Address: </b>Flat No. 15, Ragam CHS <br>
+            Ltd., Tisgaon Road, Kalyan East</p>
+            <p class="email contact-us-content">
+              <b>Email Us: </b>abhinavdinesankp@gmail.com
+            </p>
+            <p class="ph-no contact-us-content"><b>Contact Us: </b>9372614927</p>
+        </div>
+
+        <!-- Footer Follow Us Section  -->
+        <div class="footer-follow-us-section">
+          <p class="follow-us">Follow Us At</p>
+          <div class="social-media">
+            <p class="app-list"><img class="app-logo" src="/static/Facebook-Logo.png" alt="FaceBook-CutLab"><a class="navigate" href="https://www.facebook.com">Facebook</a></p>
+            <p class="app-list"><img class="app-logo" src="/static/Instgram-Logo.png" alt="FaceBook-CutLab"><a class="navigate" href="https://www.instagram.com">Instagram</a></p>
+            <p class="app-list"><img class="app-logo" src="/static/Twitter-Logo.png" alt="FaceBook-CutLab"><a class="navigate" href="https://www.twitter.com">Twitter</a></p>
+            <p class="app-list"><img class="app-logo" src="/static/Discord-Logo.png" alt="FaceBook-CutLab"><a class="navigate" href="https://www.discord.com">Discord</a></p>
+        </div>
+        </div>
+        <div class="copyright">
+          <span>Copyright @ 2023 <br>All rights reserved</span>
+      </div>
+      </div>
+    </div>
+    </footer>
+    <script>
+      let subMenu = document.getElementById("subMenu");
+      function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+      }
+
+    console.log("Hello World!")
+    </script>
+</body>
+</html>

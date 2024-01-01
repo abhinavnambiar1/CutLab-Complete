@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+  }
+
+h1{
+    padding-top: 3vw;
+    padding-left: 40vw;
+    color: #38af7e;
+}
+
+video{
+    display: none;
+    padding-top: 2vw;
+    padding-left: 20vw;
+}

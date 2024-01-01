@@ -1,0 +1,444 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+  }
+  
+  nav,
+  .left-nav,
+  .right-nav,
+  ul {
+    display: flex;
+    height: 8vw;
+    padding: 0.5vw;
+    text-decoration: none;
+  }
+  
+  .left-nav{
+    width: 50vw;
+    padding-left: 4vw;
+  }
+  
+  .left-nav img{
+    width: 6vw; 
+    height: 6vw;
+  }
+  
+  .cutlab{
+    /* text-decoration: none; */
+    align-items: center;
+    font-size: 2vw;
+    font-weight: 600;
+    padding-left: 1vw;
+    padding-top: 1vw;
+  } 
+  
+  
+  .left-nav a{
+    font-weight: 600;
+    font-size: 2.5vw;
+    font-family: 'Potta One', cursive;
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .middle-nav{
+    width: 15vw;
+  }
+  
+  .right-nav{
+    width: 40vw;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .right-nav ul{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 3vw;
+    /* padding-right: 4vw; */
+  }
+  
+  li{
+    list-style: none;
+    font-weight: 600;
+    padding: 1.3vw;
+  }
+  
+  .list-style{
+    font-size: 1.2vw;
+    font-weight: 600;
+  }
+  
+  li a{
+    text-decoration: none;
+    color: #000000;
+    padding: 0.5vw;
+    border-style: outset;
+  }
+  
+  .user-logo img{
+    width: 5vw;
+    height: 5vw;
+  }
+  
+  .user-logo:hover{
+    cursor: pointer;
+  }
+  
+  .sub-menu-wrap{
+    position: absolute;
+    top: 15%;
+    right: 7%;
+    width: 20vw;
+    /* height: 80vw; */
+    border-style: none;
+    max-height: 0vw;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  
+  .sub-menu-wrap.open-menu{
+    max-height: 30vw;
+    border-style: outset;
+  }
+  
+  .sub-menu{
+    background-color: #ffffff;
+    margin: 0.5vw;
+  }
+  
+  .sub-menu hr{
+    border: 0;
+    height: 0.1vw;
+    width: 100%;
+    background-color: #38af7e;
+    /* margin: 15px 0 10px; */
+  }
+  .user-info{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1vw;
+  }
+  
+  .user-info img{
+    width: 6vw;
+    height: 6vw;
+    margin-right: 1vw;
+  }
+  
+  .sub-menu-link img{
+    margin-top: 1vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-left: 0.7vw;
+    margin-right: 0.7vw;
+    margin-bottom: 1vw;
+  }
+  
+  #big-logout-img{
+    /* width: 1vw; */
+    height: 2.2vw;
+    margin-top: 0.3vw;
+    margin-left: 1vw;
+  }
+  
+  .sub-menu-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #525252;
+    margin: 0.5vw;
+  }
+  
+  .sub-menu-link p{
+    font-size: 1.1vw;
+    width: 100%;
+  }
+  
+  .sub-menu-link span{
+    margin-right: 1.5vw;
+    font-size: 1.1vw;
+    transition: transform 0.5s;
+  }
+  
+  .sub-menu-link:hover span{
+    transform: translateX(0.5vw);
+  }
+  
+  .sub-menu-link:hover p{
+    font-weight: 600;
+  }
+  
+  /* Main Section */
+.left-right{
+    display: flex;
+}
+
+  .left-main{
+    height: 75vw;
+    width: 20vw;
+    background-color: rgba(159, 216, 191, 0.25);
+  }
+
+  .main-left{
+    padding-top: 2vw;
+    padding-left: 3vw;
+    /* padding-bottom: 1vw; */
+  }
+
+  .main-left a{
+    text-decoration: none;
+    color: #38af7e;
+    font-size: 1.5vw;
+    font-weight: 600;
+  }
+
+/* .right-main{ */
+  /* padding-left: 0.5vw; */
+/* } */
+
+  .right-top{
+    width: 76vw;
+    height: 15vw;
+    background-color: rgba(93, 190, 148, 0.7);
+    border-style: outset;
+  }
+
+  .right-top {
+    /* background-color: #5dbe94; */
+    transition: background-color 0.3s ease; /* Adjust duration and timing function as needed */
+  }
+  
+  .right-top:hover {
+    background-color: rgba(208, 241, 224, 3); /* Change to the target color */
+  }
+
+.invite{
+  padding-top: 3.5vw;
+  /* padding-bottom: 1vw; */
+  padding-left: 4vw;
+  font-weight: 800;
+    font-size: 3vw;
+    font-family: 'Potta One', cursive;
+}
+
+.salutation{
+  padding-top: 1vw;
+  padding-left: 4vw;
+  font-size: 2vw;
+  font-weight: 600;
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+.right-top p{
+  /* margin-right: 1.5vw; */
+  /* font-size: 1.1vw; */
+  transition: transform 0.5s;
+}
+
+.right-top:hover p{
+  transform: translateX(0.5vw);
+}
+
+.sp-videos a{
+  text-decoration: none;
+  transition: transform 0.5s;
+  color: #000000;
+}
+
+.sp-videos img{
+  width: 4vw;
+  height: 4vw;
+}
+
+.sp-videos p{
+  width: 17vw;
+}
+
+.sp-videos a:hover{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+}
+
+.correction-left{
+  margin-left: -0.5vw;
+}
+
+  /* Bottom Section  */
+  .mini-footer{
+    display: flex;
+    width: 100vw;
+    height: 9.3vw;
+    background-color: rgba(159, 216, 191, 0.50);
+
+}
+.footer-left{
+  width: 24vw;
+  display: flex;
+}
+
+.footer-left a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.bottom-logo{
+    padding-left: 3vw;
+    padding-top: 1vw;
+    width: 9vw;
+    height: 7vw;
+}
+
+.cutlab-stylish{
+    padding-top: 2.7vw;
+    padding-left: 1vw;
+    font-weight: 600;
+    font-size: 2.5vw;
+    font-family: 'Potta One', cursive;
+}
+
+
+/* Description */
+.right-bottom{
+  padding: 0vw 0vw 2vw 0vw;
+}
+
+.row1, .row2, .row3, .row4, .row5, .row6{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 3vw;
+}
+
+.row7{
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  padding-top: 3vw;
+  margin-left: 0.5vw;
+}
+
+.sp-videos{
+  padding-top: 1vw;
+  padding-left: 2vw;
+  padding-right: 5vw;
+  display: flex;
+}
+
+.sp-image{
+  width: 4vw;
+  height: 4vw;
+}
+
+.sp-desc{
+  padding-left: 1.8vw;
+  font-size: 0.99vw;
+}
+
+/* Footer Section */
+
+.footer-section{
+  display: flex;
+  align-items: center;    
+  width: 100vw;
+  height: 18vw;
+  background-color: rgba(159, 216, 191, 0.50);
+}
+
+.footer-left{
+  display: flex;
+  align-items: center;    
+}
+
+.bottom-logo{
+  padding-left: 3vw;
+  padding-top: 1vw;
+  width: 9vw;
+  height: 7vw;
+}
+
+.cutlab-stylish{
+  padding-top: 1vw;
+  padding-left: 1vw;
+  font-weight: 600;
+  font-size: 2.5vw;
+  font-family: 'Potta One', cursive;
+  text-decoration: none;
+  color: black;
+}
+
+.footer-left a{
+  text-decoration: none;
+}
+
+/* Footer Contact Us Section  */
+.footer-contact-us-section{
+  padding-left: 7vw;
+}
+
+.contact-us{
+  /* padding-top: 2vw; */
+  font-weight: 600;
+  font-size: 1.5vw;
+  text-decoration: underline;
+}
+
+.contact-us-content{
+  padding-top: 1vw;
+  font-size: 1.1vw;
+}
+
+/* Footer Follow Us Section  */
+.footer-follow-us-section{
+  padding-left: 7vw;
+}
+
+.follow-us{
+  /* padding-top: 3vw; */
+  font-weight: 600;
+  font-size: 1.5vw;
+  text-decoration: underline;
+}
+
+.app-list{
+  display: block;
+}
+
+.app-list p{
+  display: inline-block;
+  /* margin-top: 4vw; */
+  margin: auto;
+  border: none;
+  padding: 1vw;
+}
+
+.app-logo{
+  padding-top: 1vw;
+  width: 2.3vw;
+    height: 3.2vw;
+    margin-bottom: -0.5vw;
+}
+
+.navigate{
+  text-decoration: none;
+  color: #000000;
+  font-weight: 600;
+  font-size: 1.1vw;
+  margin-top: -1vw;
+}
+
+.copyright{
+  padding-top: 2.5vw;
+  padding-left: 11vw;
+  font-weight: 600;
+  font-size: 1.1vw;
+}

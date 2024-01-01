@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CutLab - An Online Video Editor</title>
+    <!-- <link rel="stylesheet" href="/static/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}"> 
+    <!-- <script src="/templates/script.js"></script> -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Potta+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NavBar -->
+  <nav>
+    <div class="left-nav">
+        <a href="/"><img src="/static/CutLab-Logo.png" alt="LOGO" /></a>
+        <p class="cutlab"><a href="/">CUTLAB</a></p>
+      </div>
+      <div class="middle-nav"></div>
+      <div class="right-nav">
+        <ul>
+          <li class="list-style"><a href="register">Sign Up</a></li>
+          <li class="list-style"><a href="/login">Sign In</a></li>
+          <li class="list-style"><a href="/contact">Contact Us</a></li>
+          <li><div class="user-logo"><img src="/static/user-profile.png" alt="User-Profile" onclick="toggleMenu()"></div></li>
+        </ul>
+        
+          <div class="sub-menu-wrap"  id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="/static/user-profile.png" alt="User-Image">
+                <p>User Name</p>
+              </div>
+              <hr>
+              <a href="#" class="sub-menu-link">
+                <img src="/static/Profile-menu.png" alt="Profile-Image">
+                <p>Your Profile</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img id="big-logout-img" src="/static/Log-out-menu.png" alt="Profile-Image">
+                <p>Log Out</p>
+                <span>></span>
+              </a>
+            </div>
+          </div>
+      </div>
+    </nav>
+
+    <!-- Body Section  -->
+    <main>
+      <!-- Title Image Section  -->
+      <div class="div1">
+      <div class="img-text-section">
+        <div class="img-title">
+          <p class="title1">Free Online Editor with </p><p class="title2">professional features</p> 
+        </div>
+        <p class="img-content">
+          "Unleash your creativity and transform <br> your vision into stunning videos with <br> our intuitive online video editor."</p>
+          <button class="navigate-button"><a class="navigate-btn" href="/workspace">+ Create Video</a></button>
+      </div>
+      <div class="img">
+        <img class="title-image" src="/static/CutLab-Title-Image-BGR.png" alt="Title-Image">
+      </div>
+    </div>
+
+      <!-- Editing Page Navigating Section  -->
+    <div class="div2">
+      <p class="p1">"Edit Like a Pro, Without the Learning Curve"</p>
+      <div class="button-edit">
+      <span class="p2">Create videos for free</span>
+      <div class="ellipse"><a href="/workspace"><img class="right-arrow" src="/static/Right-Arrow.png" alt="Right-Arrow"></a>
+      </div>
+    </div>
+    </div>
+
+    <!-- Images Slider -->
+    <div class="div3">
+    <div class="wrapper">
+      <div class="track">
+          <div class="scrolling-images">
+              <img class="image-item" src="/static/Add-Images-BGR.png" alt="img-1" />
+          </div>
+          <div class="scrolling-images">
+              <img class="image-item" id="big-image" src="/static/Add-Videos-BGR.png" alt="img-2" />
+          </div>
+          <div class="scrolling-images">
+              <img class="image-item" src="/static/Work-Smoothly-BGR.png" alt="img-3" />
+          </div>
+          <div class="scrolling-images">
+              <img class="image-item" src="/static/Trim-Videos-BGR.png" alt="img-4" />
+          </div>
+          <div class="scrolling-images">
+              <img class="image-item" src="/static/Play-Videos-BGR.png" alt="img-5" />
+          </div>
+          <div class="scrolling-images">
+              <img class="image-item" src="/static/Work-On-Videos-BGR.png" alt="img-6" />
+          </div>
+          <div class="scrolling-images">
+              <img class="image-item" src="/static/Add-Images-to-Videos-BGR.png" alt="img-7" />
+          </div>
+          <div class="scrolling-images">
+              <img class="image-item" src="/static/Vlogging-Videos-BGR.png" alt="img-8" />
+          </div>
+          <div class="scrolling-images">
+              <img class="image-item" src="/static/Demo-of-Video-BGR.png" alt="img-9" />
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Description Part -->
+  <div class="div4">
+    <p class="div4-title">Enhance Your Video Editing Skills - Anyone can edit</p>
+    <div class="row1">
+    <div class="sp-videos">
+      <img src="/static/Cut-Videos.png" alt="Trim-Videos" class="sp-image">
+      <p class="sp-desc">Cut videos to the length <br> 
+        you need in just few <br>
+        clicks</p>
+    </div>
+    <div class="sp-videos">
+      <img src="/static/Crop-Videos.png" alt="Crop-Videos" class="sp-image">
+      <p class="sp-desc">Enhance impact of your video <br> by easily cropping <br>frames</p>
+    </div>
+    <div class="sp-videos">
+      <img src="/static/Merge-Videos.png" alt="Merge-Videos" class="sp-image">
+      <p class="sp-desc">Merge shorter clips to <br>larger clips easily</p>
+    </div>
+  </div>
+  <div class="row2">
+    <div class="sp-videos correction1">
+      <img src="/static/Add-Text.png" alt="Add-Text" class="sp-image">
+      <p class="sp-desc">Add various texts, titles <br>and subtitles to your <br>videos</p>
+    </div>
+    <div class="sp-videos correction2">
+      <img src="/static/Compile-Images.png" alt="Compile-Images" class="sp-image">
+      <p class="sp-desc">Compile your images to <br>videos you enhance <br>your creativity</p>
+    </div>
+    <div class="sp-videos correction3">
+      <img src="/static/Add-Music.png" alt="Trim-Videos" class="sp-image">
+      <p class="sp-desc">Add background music <br>or sound effects to your <br>videos</p>
+    </div>
+  </div>
+  </div>
+    </main>
+    <footer>
+      <!-- Footer Section  -->
+      <div class="div5">
+        <div class="footer-section">
+          <div class="footer-left">
+            <a href="/"><img src="/static/CutLab-Logo.png" alt="Footer-Logo" class="bottom-logo"></a>
+            <a href="/"><p class="cutlab-stylish">CUTLAB</p></a>
+        </div>
+
+        <!-- Footer Contact us section  -->
+        <div class="footer-contact-us-section">
+          <p class="contact-us">Contact Us</p>
+          <p class="address contact-us-content"><b>Address: </b>Flat No. 15, Ragam CHS <br>
+            Ltd., Tisgaon Road, Kalyan East</p>
+            <p class="email contact-us-content">
+              <b>Email Us: </b>abhinavdinesankp@gmail.com
+            </p>
+            <p class="ph-no contact-us-content"><b>Contact Us: </b>9372614927</p>
+        </div>
+
+        <!-- Footer Follow Us Section  -->
+        <div class="footer-follow-us-section">
+          <p class="follow-us">Follow Us At</p>
+          <div class="social-media">
+            <p class="app-list"><img class="app-logo" src="/static/Facebook-Logo.png" alt="FaceBook-CutLab"><a class="navigate" href="https://www.facebook.com">Facebook</a></p>
+            <p class="app-list"><img class="app-logo" src="/static/Instgram-Logo.png" alt="FaceBook-CutLab"><a class="navigate" href="https://www.instagram.com">Instagram</a></p>
+            <p class="app-list"><img class="app-logo" src="/static/Twitter-Logo.png" alt="FaceBook-CutLab"><a class="navigate" href="https://www.twitter.com">Twitter</a></p>
+            <p class="app-list"><img class="app-logo" src="/static/Discord-Logo.png" alt="FaceBook-CutLab"><a class="navigate" href="https://www.discord.com">Discord</a></p>
+        </div>
+        </div>
+        <div class="copyright">
+          <span>Copyright @ 2023 <br>All rights reserved</span>
+      </div>
+      </div>
+    </div>
+    </footer>
+
+<script>
+  let subMenu = document.getElementById("subMenu");
+  function toggleMenu(){
+    subMenu.classList.toggle("open-menu");
+  }
+</script>
+
+</body>
+</html>

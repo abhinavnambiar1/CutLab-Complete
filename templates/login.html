@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CutLab | Login</title>
+    <!-- <link rel="stylesheet" href="/templates/login.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Potta+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- NavBar -->
+    <nav>
+        <div class="left-nav">
+            <a href="/"><img src="/static/CutLab-Logo.png" alt="LOGO" /></a>
+            <p class="cutlab"><a href="/">CUTLAB</a></p>
+          </div>
+          <div class="middle-nav"></div>
+          <div class="right-nav">
+            <ul>
+                <li class="list-style"><a href="/register">Sign Up</a></li>
+              <li class="list-style"><a href="/contact">Contact Us</a></li>
+            </ul>
+          </div>
+        </nav>
+    <main>
+        <!-- Registration Form -->
+        <div class="form">
+            <div class="form-image">
+                <img class="login-image" src="/static/CutLab-LoginBGR.png" alt="Login-image">
+            </div>
+            <div class="form-input">
+                <input type="text" class="input-area" placeholder="User Name">
+                <input type="password" class="input-area" placeholder="Password">
+                <input class="login-button" type="submit" value="Sign In">
+            </div>
+        </div>
+        <hr>
+        <!-- Bottom Mini Footer  -->
+        <div class="mini-footer">
+            <div class="footer-left">
+                <a href="/"><img src="/static/CutLab-Logo.png" alt="Footer-Logo" class="bottom-logo"></a>
+            <a href="/"><p class="cutlab-stylish">CUTLAB</p></a>
+            </div>
+            <div class="follow-social-media">
+                <p class="follow-us">Follow Us At</p>
+                <div class="social-media">
+                    <p class="app-list"><img class="app-logo" src="/static/Facebook-Logo.png" alt="FaceBook-CutLab"><a class="navigate" href="https://www.facebook.com">Facebook</a></p>
+                    <p class="app-list"><img class="app-logo" src="/static/Instgram-Logo.png" alt="FaceBook-CutLab"><a class="navigate" href="https://www.instagram.com">Instagram</a></p>
+                    <p class="app-list"><img class="app-logo" src="/static/Twitter-Logo.png" alt="FaceBook-CutLab"><a class="navigate" href="https://www.twitter.com">Twitter</a></p>
+                    <p class="app-list"><img class="app-logo" src="/static/Discord-Logo.png" alt="FaceBook-CutLab"><a class="navigate" href="https://www.discord.com">Discord</a></p>
+                </div>
+            </div>
+            <div class="copyright">
+                <span>Copyright @ 2023 <br>All rights reserved</span>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

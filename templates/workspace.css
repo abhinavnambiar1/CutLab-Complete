@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.overall{
+    display: flex;
+}
+
+.left-most{
+    height: 100vh;
+    width: 6vw;
+    background-color: rgba(159, 216, 191, 1);
+}
+
+form{
+    padding: 2vw;
+    justify-content: space-around;
+}
+
+.upload-area{
+    height: 100vh;
+    width: 20vw;
+    background-color: rgba(159, 216, 191, 0.5);
+}
+
+.upload-button{
+    padding-top: 4vw;
+    padding-left: 2vw;
+}
+
+.submit-button{
+    margin-top: 2vw;
+    margin-left: 13vw;
+    padding: 0.3vw;
+}
+
+.central-portion{
+    padding-left: 8vw;
+    padding-top: 2vw;
+}  

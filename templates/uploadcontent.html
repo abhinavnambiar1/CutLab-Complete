@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CutLab | Workspace</title>
+    <!-- <link rel="stylesheet" href="/templates/workspace.css"> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/workspace.css') }}"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Potta+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overall">
+    <div class="left-most">
+        <div class="controls">
+            
+        </div>
+    </div>
+    <div class="upload-area">
+        <form action="{{url_for('upload')}}" method="post" enctype="multipart/form-data">
+            <input class="upload-button" id="upload-btn" type="file" name="video" accept=".mp4">
+            <input class="submit-button" id="submit-btn" type="submit" value="Upload">
+        </form>
+    </div>
+    <div class="central-portion">
+    <div class="preview-area">
+        <video width="550" height="370" controls>
+            <source src="{{url_for('static',filename='videos/'+video_name)}}" type="video/mp4">
+        </video>
+    </div>
+    <div class="editing-area">
+
+    </div>
+</div>
+</div>
+</body>
+</html>
+
+<style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+.overall{
+    display: flex;
+}
+
+.left-most{
+    height: 100vh;
+    width: 6vw;
+    background-color: rgba(159, 216, 191, 1);
+}
+
+form{
+    padding: 2vw;
+    justify-content: space-around;
+}
+
+.upload-area{
+    height: 100vh;
+    width: 20vw;
+    background-color: rgba(159, 216, 191, 0.5);
+}
+
+.upload-button{
+    padding-top: 4vw;
+    padding-left: 2vw;
+}
+
+.submit-button{
+    margin-top: 2vw;
+    margin-left: 13vw;
+    padding: 0.3vw;
+}
+
+.central-portion{
+    padding-left: 8vw;
+    padding-top: 2vw;
+}  
+</style>
