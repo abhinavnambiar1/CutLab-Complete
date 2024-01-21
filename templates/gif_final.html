@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/gif_final.css') }}"> 
+    <title>Gifed Video Result</title>
+</head>
+<body>
+    <h2>Gifed Video Result</h2>
+    <!-- <video controls>
+        <source src="{{ url_for('static', filename='edited/' + video_path) }}">
+    </video> -->
+    <img src="{{ url_for('static', filename='edited/' + video_path) }}" alt="Generated GIF">
+    <br>
+    <a href="{{ url_for('download_1', filename=video_path) }}" class="download-btn" download>Download Gifed Video</a>
+    <!-- <a download>Download Gifed Video</a> -->
+</body>
+</html>

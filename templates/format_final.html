@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/format_final.css') }}"> 
+    <title>Formated Video Result</title>
+</head>
+<body>
+    <h2>Formated Video Result</h2>
+    <video controls>
+        <source src="{{ url_for('static', filename='edited/' + video_path) }}" type="video/mp4">
+        <source src="{{ url_for('static', filename='edited/' + video_path) }}" type="video/avi">
+        <source src="{{ url_for('static', filename='edited/' + video_path) }}" type="video/mkv">
+        <source src="{{ url_for('static', filename='edited/' + video_path) }}" type="video/mov">
+        <source src="{{ url_for('static', filename='edited/' + video_path) }}" type="video/wmv">
+        <source src="{{ url_for('static', filename='edited/' + video_path) }}">
+        <source src="{{ url_for('static', filename='edited/' + video_path) }}" type="video/webm">
+        <source src="{{ url_for('static', filename='edited/' + video_path) }}" type="video/mpeg">
+        <source src="{{ url_for('static', filename='edited/' + video_path) }}" type="video/mpg">
+        <source src="{{ url_for('static', filename='edited/' + video_path) }}" type="video/mov">
+        <!-- <source src="{{result}}"> -->
+    </video>
+    <br>
+    <a href="{{ url_for('download_1', filename=video_path) }}" class="download-btn" download>Download Formated Video</a>
+    <!-- <a download>Download Formated Video</a> -->
+</body>
+</html>

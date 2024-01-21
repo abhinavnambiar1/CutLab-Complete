@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/split_final.css') }}"> 
+    <title>Trimmed Video Result</title>
+</head>
+<body>
+    <h2>Trimmed Video Result</h2>
+    <video controls>
+        <source src="{{ url_for('static', filename='edited/' + video_path1) }}">
+        <!-- <source src="{{result}}"> -->
+    </video>
+    <br>
+    <a href="{{ url_for('download_1', filename=video_path1) }}" class="download-btn" download>Download Splitted Video 1</a>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <video controls>
+        <source src="{{ url_for('static', filename='edited/' + video_path2) }}">
+        <!-- <source src="{{result}}"> -->
+    </video>
+    <br>
+    <!-- <a href="video2" class="download-btn" download>Download Trimmed Video</a> -->
+    <a href="{{ url_for('download_1', filename=video_path2) }}" class="download-btn" download>Download Splitted Video 2</a>
+    <!-- <a download>Download Trimmed Video</a> -->
+</body>
+</html>

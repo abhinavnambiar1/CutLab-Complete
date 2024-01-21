@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CutLab | Crop Videos</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/preview_crop.css') }}"> 
+    <!-- <link rel="stylesheet" href="../static/css/preview_crop.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Potta+One&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <!-- NavBar -->
+  <nav>
+    <div class="left-nav">
+        <a href="/"><img src="/static/CutLab-Logo.png" alt="LOGO" /></a>
+        <p class="cutlab"><a href="/">CUTLAB</a></p>
+      </div>
+      <div class="middle-nav"></div>
+      <div class="right-nav">
+        <ul>
+          <!-- <li class="list-style"><a href="register">Sign Up</a></li> -->
+          <!-- <li class="list-style"><a href="/login">Sign In</a></li> -->
+          <li class="list-style"><a href="/contact">Contact Us</a></li>
+          <li><div class="user-logo"><img src="/static/user-profile.png" alt="User-Profile" onclick="toggleMenu()"></div></li>
+        </ul>
+        
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="/static/user-profile.png" alt="User-Image">
+                <p>User Name</p>
+              </div>
+              <hr>
+              <a href="#" class="sub-menu-link">
+                <img src="/static/Profile-menu.png" alt="Profile-Image">
+                <p>Your Profile</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img id="big-logout-img" src="/static/Log-out-menu.png" alt="Profile-Image">
+                <p>Log Out</p>
+                <span>></span>
+              </a>
+            </div>
+          </div>
+      </div>
+    </nav>
+    <main>
+        <!-- Main Section  -->
+        <div class="left-right">
+            <div class="left-main">
+                <p class="main-left"><a href="/">Home</a></p>
+                <p class="main-left"><a href="/">My Videos</a></p>
+            </div>
+            <div class="right-main">
+              <h1>You can Crop your videos here</h1>
+            <!-- {% if toggled %}
+        <script>
+            // Execute JavaScript code to toggle video visibility
+            toggleVideoVisibility();
+        </script>
+    {% endif %} -->
+    <video width="840" height="360" controls>
+      <source src="{{url_for('static',filename='upload/'+video_filename_crop)}}">
+  </video>
+  <h2>Crop Video</h2>
+    <!-- <form action="/finalcrop" method="post">
+        <input type="hidden" name="video_filename_crop" value="{{ video_filename_crop }}">
+         -->
+         <form method="post" action="/finalcrop">
+          <label for="video">Choose a video file:</label>
+          <input type="hidden" name="video_filename_crop" value="{{ video_filename_crop }}">
+          <!-- <input type="file" id="video" name="video" accept="video/*" required> -->
+          <br>
+        <p>Select Aspect Ratio:</p>
+        <div class="btn-grp1">
+        <button type="submit" name="aspect_ratio" value="1:1" required>1:1</button>
+        <button type="submit" name="aspect_ratio" value="2:3" required>2:3</button>
+        <button type="submit" name="aspect_ratio" value="3:2" required>3:2</button>
+      </div>
+      <div class="btn-grp2">
+        <button type="submit" name="aspect_ratio" value="4:5" required>4:5</button>
+        <button type="submit" name="aspect_ratio" value="9:16" required>9:16</button>
+        <button type="submit" name="aspect_ratio" value="16:9" required>16:9</button>
+        
+      </div>
+        <br>
+        <input type="hidden" id="selected_aspect_ratio" name="selected_aspect_ratio">
+        <br>
+          <!-- <input type="submit" value="Crop and Preview"> -->
+      </form>
+            </div>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+  }
+    function toggleVideoVisibility() {
+            var video = document.getElementById('toggle');
+
+            // Toggle the visibility of the video
+            if (video.style.display === 'none' || video.style.display === '') {
+                video.style.display = 'block';
+            } else {
+                video.style.display = 'none';
+            }
+        }
+        function refreshPage() {
+            location.reload(true);  // true forces a reload from the server instead of the cache
+        }
+
+        function validateForm() {
+            var aspectRatio = document.querySelector('input[name="aspect_ratio"]:checked');
+            if (!aspectRatio) {
+                alert("Please select an aspect ratio.");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

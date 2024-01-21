@@ -1,0 +1,22 @@
+
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+img {
+    width: 80%;
+    max-width: 800px;
+    height: auto;
+    margin-bottom: 20px;
+}
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}

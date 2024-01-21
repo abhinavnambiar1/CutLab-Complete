@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CutLab | Overlay Images</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/overlay.css') }}"> 
+    <!-- <link rel="stylesheet" href="/static/css/overlay.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Potta+One&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+    <!-- NavBar -->
+  <nav>
+    <div class="left-nav">
+        <a href="/"><img src="/static/CutLab-Logo.png" alt="LOGO" /></a>
+        <p class="cutlab"><a href="/">CUTLAB</a></p>
+      </div>
+      <div class="middle-nav"></div>
+      <div class="right-nav">
+        <ul>
+          <!-- <li class="list-style"><a href="register">Sign Up</a></li> -->
+          <!-- <li class="list-style"><a href="/login">Sign In</a></li> -->
+          <li class="list-style"><a href="/contact">Contact Us</a></li>
+          <li><div class="user-logo"><img src="/static/user-profile.png" alt="User-Profile" onclick="toggleMenu()"></div></li>
+        </ul>
+        
+          <div class="sub-menu-wrap" id="subMenu">
+            <div class="sub-menu">
+              <div class="user-info">
+                <img src="/static/user-profile.png" alt="User-Image">
+                <p>User Name</p>
+              </div>
+              <hr>
+              <a href="#" class="sub-menu-link">
+                <img src="/static/Profile-menu.png" alt="Profile-Image">
+                <p>Your Profile</p>
+                <span>></span>
+              </a>
+              <a href="#" class="sub-menu-link">
+                <img id="big-logout-img" src="/static/Log-out-menu.png" alt="Profile-Image">
+                <p>Log Out</p>
+                <span>></span>
+              </a>
+            </div>
+          </div>
+      </div>
+    </nav>
+    <main>
+        <!-- Main Section  -->
+        <div class="left-right">
+            <div class="left-main">
+                <p class="main-left"><a href="/">Home</a></p>
+                <p class="main-left"><a href="/">My Videos</a></p>
+            </div>
+            <div class="right-main">
+              <h1>You can Overlay Images over your videos here</h1>
+              <form action="{{url_for('uploadoverlay')}}" method="post" enctype="multipart/form-data">
+                <label for="videoFile">Select Video:</label>
+                <input type="file" id="video" name="video" required>
+                <br>
+                <br>
+                <input type="submit" class="upload-button">Upload</input>
+                <!-- <button type="button" onclick="toggleVideoVisibility()" class="view-preview">View Preview</button> -->
+            </form>
+            <!-- {% if toggled %}
+        <script>
+            // Execute JavaScript code to toggle video visibility
+            toggleVideoVisibility();
+        </script>
+    {% endif %}
+            </div>
+            </div>
+            
+        </div>
+
+    </main>
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        function toggleMenu(){
+        subMenu.classList.toggle("open-menu");
+  }
+    function toggleVideoVisibility() {
+            var video = document.getElementById('toggle');
+
+            // Toggle the visibility of the video
+            if (video.style.display === 'none' || video.style.display === '') {
+                video.style.display = 'block';
+            } else {
+                video.style.display = 'none';
+            }
+        }
+        function refreshPage() {
+            location.reload(true);  // true forces a reload from the server instead of the cache
+        }
+    </script>
+</body>
+</html>
