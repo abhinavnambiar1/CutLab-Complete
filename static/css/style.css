@@ -377,6 +377,7 @@ li a{
   text-align: center;
   font-weight: 600;
   font-size: 2vw;
+  width: 95%;
 }
 
 .row1{
@@ -391,6 +392,7 @@ li a{
   padding-left: 5vw;
   padding-right: 5vw;
   display: flex;
+  width: 35%;
 }
 
 .sp-image{
@@ -408,14 +410,6 @@ li a{
     align-items: center;
     justify-content: center;
     padding-top: 3vw;
-}
-
-.correction1{
-  margin-left: 2vw;
-}
-
-.correction3{
-  margin-left: 3vw;
 }
 
 .sp-videos a{
